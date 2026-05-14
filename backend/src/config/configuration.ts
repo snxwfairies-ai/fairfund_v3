@@ -1,0 +1,22 @@
+// src/config/configuration.ts
+export default () => ({
+  NODE_ENV:            process.env.NODE_ENV || 'development',
+  PORT:                parseInt(process.env.PORT || '5000'),
+  DATABASE_URL:        process.env.DATABASE_URL,
+  REDIS_URL:           process.env.REDIS_URL,
+  JWT_SECRET:          process.env.JWT_SECRET,
+  JWT_REFRESH_SECRET:  process.env.JWT_REFRESH_SECRET,
+  JWT_ACCESS_EXPIRY:   process.env.JWT_ACCESS_EXPIRY  || '15m',
+  JWT_REFRESH_EXPIRY:  process.env.JWT_REFRESH_EXPIRY || '7d',
+  BCRYPT_ROUNDS:       parseInt(process.env.BCRYPT_ROUNDS || '12'),
+  SMTP_HOST:     process.env.SMTP_HOST     || '',
+  SMTP_PORT:     parseInt(process.env.SMTP_PORT || '587'),
+  SMTP_USER:     process.env.SMTP_USER     || '',
+  SMTP_PASS:     process.env.SMTP_PASS     || '',
+  SMTP_FROM:     process.env.SMTP_FROM     || 'noreply@fairefund.in',
+  APP_URL:       process.env.APP_URL       || 'https://fairefund.in',
+  RAZORPAY_KEY_ID:     process.env.RAZORPAY_KEY_ID     || 'rzp_test_placeholder',
+  RAZORPAY_KEY_SECRET:  process.env.RAZORPAY_KEY_SECRET  || 'placeholder_secret',
+  RAZORPAY_WEBHOOK_SECRET: process.env.RAZORPAY_WEBHOOK_SECRET || 'webhook_secret',
+  ALLOWED_ORIGINS:     process.env.ALLOWED_ORIGINS || 'http://localhost:3000',
+});

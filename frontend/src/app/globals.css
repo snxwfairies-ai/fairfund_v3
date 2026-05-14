@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #0B1D3A;
+    --navy-light: #112347;
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --cream: #F5F0E8;
+    --green: #2D7A4F;
+    --red: #C0392B;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body { color: var(--navy); }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-thumb { background: #CBD5E0; border-radius: 9999px; }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-2xl border border-slate-200 shadow-sm; }
+  .btn  { @apply inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-bold transition-all; }
+  .btn-primary { @apply bg-navy text-white hover:bg-navy-light hover:shadow-lg hover:-translate-y-0.5; }
+  .btn-gold    { @apply bg-gold  text-navy  hover:bg-gold-light hover:shadow-lg hover:-translate-y-0.5; }
+  .btn-outline { @apply bg-white text-navy  border border-slate-200 hover:border-gold; }
+  .btn-sm      { @apply px-3 py-1.5 text-xs; }
+  .btn-lg      { @apply px-6 py-3.5 text-base; }
+  .badge       { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold; }
+  .stat-card   { @apply bg-gradient-to-br from-navy to-[#1a3a6e] text-white rounded-2xl p-5; }
+  .form-input  { @apply w-full px-3.5 py-2.5 border-1.5 border-slate-200 rounded-lg text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10; }
+  .form-label  { @apply block text-xs font-semibold text-navy mb-1.5; }
+  .nav-item    { @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-white/60 hover:text-white/90 hover:bg-white/5 transition-all; }
+  .nav-item.active { @apply text-gold-light bg-gold/15 border border-gold/30 font-bold; }
+  .progress-bar { @apply h-1.5 bg-slate-200 rounded-full overflow-hidden; }
+  .section-title { @apply font-display text-2xl font-normal text-navy mb-1; }
+}
+
+@layer utilities {
+  .border-1\.5 { border-width: 1.5px; }
+  .text-navy   { color: var(--navy); }
+  .bg-navy     { background-color: var(--navy); }
+  .bg-navy-light { background-color: var(--navy-light); }
+  .text-gold   { color: var(--gold); }
+  .bg-gold     { background-color: var(--gold); }
+  .bg-gold-light { background-color: var(--gold-light); }
+  .text-gold-light { color: var(--gold-light); }
+  .bg-cream    { background-color: var(--cream); }
+  .border-gold { border-color: var(--gold); }
+}
