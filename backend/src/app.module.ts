@@ -1,3 +1,7 @@
+import { AIModule }            from './modules/ai/ai.module';
+import { StorageModule }       from './modules/storage/storage.module';
+import { OTPModule }           from './modules/otp/otp.module';
+import { KYCModule }           from './modules/kyc/kyc.module';
 import { EmailModule }         from './modules/email/email.module';
 import { OnboardingModule }    from './modules/onboarding/onboarding.module';
 import { AgentModule }          from './modules/agent/agent.module';
@@ -53,6 +57,10 @@ import configuration           from './config/configuration';
     CaModule,
     DashboardModule,
     EmailModule,
+    AIModule,
+    StorageModule,
+    OTPModule,
+    KYCModule,
     TransactionModule,
   ],
   controllers: [AppController],

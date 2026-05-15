@@ -1,5 +1,7 @@
 // src/lib/api.ts
-const BASE = typeof window !== 'undefined' ? '/api/v1' : `${process.env.NEXT_PUBLIC_API_URL}/api/v1`;
+const BASE = typeof window !== 'undefined' 
+  ? '/api/v1'
+  : (process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001') + '/api/v1';
 
 function getToken(): string | null {
   if (typeof window === 'undefined') return null;

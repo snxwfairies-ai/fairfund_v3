@@ -1,3 +1,10 @@
+jest.mock('razorpay', () => {
+  return jest.fn().mockImplementation(() => ({
+    orders: { create: jest.fn() },
+    payouts: { create: jest.fn() },
+  }));
+});
+
 import { Test, TestingModule }  from '@nestjs/testing';
 import { UnauthorizedException } from '@nestjs/common';
 import { ConfigService }          from '@nestjs/config';

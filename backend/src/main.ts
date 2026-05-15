@@ -10,7 +10,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {
+  const app = await NestFactory.create<import('@nestjs/platform-express').NestExpressApplication>(AppModule, {
     logger: ['error', 'warn', 'log'],
     bufferLogs: true,
   });

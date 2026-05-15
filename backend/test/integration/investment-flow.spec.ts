@@ -1,3 +1,11 @@
+// Mock Razorpay at module level to prevent constructor error
+jest.mock('razorpay', () => {
+  return jest.fn().mockImplementation(() => ({
+    orders: { create: jest.fn().mockResolvedValue({ id: 'order_mock_123' }) },
+    payouts: { create: jest.fn().mockResolvedValue({ id: 'payout_mock_123' }) },
+  }));
+});
+
 /**
  * Integration Tests — Full Investment Flow
  *
