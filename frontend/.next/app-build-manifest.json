@@ -61,13 +61,6 @@
       "static/chunks/main-app-39e286662836f9ba.js",
       "static/chunks/app/dashboard/admin/page-89b8d0738da91c5e.js"
     ],
-    "/dashboard/agent/page": [
-      "static/chunks/webpack-dbf7c5a6c82145d3.js",
-      "static/chunks/fd9d1056-141807af861c8a3a.js",
-      "static/chunks/69-6c5cb58710947f84.js",
-      "static/chunks/main-app-39e286662836f9ba.js",
-      "static/chunks/app/dashboard/agent/page-0454b117933594ec.js"
-    ],
     "/dashboard/admin/waitlist/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
       "static/chunks/fd9d1056-141807af861c8a3a.js",
@@ -90,6 +83,20 @@
       "static/chunks/main-app-39e286662836f9ba.js",
       "static/chunks/app/dashboard/ca/page-fc27d62d11d9718d.js"
     ],
+    "/dashboard/agent/page": [
+      "static/chunks/webpack-dbf7c5a6c82145d3.js",
+      "static/chunks/fd9d1056-141807af861c8a3a.js",
+      "static/chunks/69-6c5cb58710947f84.js",
+      "static/chunks/main-app-39e286662836f9ba.js",
+      "static/chunks/app/dashboard/agent/page-0454b117933594ec.js"
+    ],
+    "/dashboard/compliance/page": [
+      "static/chunks/webpack-dbf7c5a6c82145d3.js",
+      "static/chunks/fd9d1056-141807af861c8a3a.js",
+      "static/chunks/69-6c5cb58710947f84.js",
+      "static/chunks/main-app-39e286662836f9ba.js",
+      "static/chunks/app/dashboard/compliance/page-e52b98bcda0801ce.js"
+    ],
     "/dashboard/marketplace/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
       "static/chunks/fd9d1056-141807af861c8a3a.js",
@@ -105,20 +112,6 @@
       "static/chunks/250-017bf029879d8a7b.js",
       "static/chunks/app/dashboard/portfolio/page-d336d5ddb171aa38.js"
     ],
-    "/dashboard/profile/page": [
-      "static/chunks/webpack-dbf7c5a6c82145d3.js",
-      "static/chunks/fd9d1056-141807af861c8a3a.js",
-      "static/chunks/69-6c5cb58710947f84.js",
-      "static/chunks/main-app-39e286662836f9ba.js",
-      "static/chunks/app/dashboard/profile/page-931507958086c0bf.js"
-    ],
-    "/dashboard/compliance/page": [
-      "static/chunks/webpack-dbf7c5a6c82145d3.js",
-      "static/chunks/fd9d1056-141807af861c8a3a.js",
-      "static/chunks/69-6c5cb58710947f84.js",
-      "static/chunks/main-app-39e286662836f9ba.js",
-      "static/chunks/app/dashboard/compliance/page-e52b98bcda0801ce.js"
-    ],
     "/dashboard/sme-create/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
       "static/chunks/fd9d1056-141807af861c8a3a.js",
@@ -126,19 +119,19 @@
       "static/chunks/main-app-39e286662836f9ba.js",
       "static/chunks/app/dashboard/sme-create/page-6e2f03d821b5ebf6.js"
     ],
+    "/dashboard/profile/page": [
+      "static/chunks/webpack-dbf7c5a6c82145d3.js",
+      "static/chunks/fd9d1056-141807af861c8a3a.js",
+      "static/chunks/69-6c5cb58710947f84.js",
+      "static/chunks/main-app-39e286662836f9ba.js",
+      "static/chunks/app/dashboard/profile/page-931507958086c0bf.js"
+    ],
     "/dashboard/sme-dashboard/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
       "static/chunks/fd9d1056-141807af861c8a3a.js",
       "static/chunks/69-6c5cb58710947f84.js",
       "static/chunks/main-app-39e286662836f9ba.js",
       "static/chunks/app/dashboard/sme-dashboard/page-70ac1e44ff683ff7.js"
-    ],
-    "/(landing)/layout": [
-      "static/chunks/webpack-dbf7c5a6c82145d3.js",
-      "static/chunks/fd9d1056-141807af861c8a3a.js",
-      "static/chunks/69-6c5cb58710947f84.js",
-      "static/chunks/main-app-39e286662836f9ba.js",
-      "static/chunks/app/(landing)/layout-46d7eae1a5d73feb.js"
     ],
     "/(landing)/for-investors/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
@@ -148,6 +141,13 @@
       "static/chunks/250-017bf029879d8a7b.js",
       "static/chunks/494-183ec842fcabee41.js",
       "static/chunks/app/(landing)/for-investors/page-53c29d7d5bdb453c.js"
+    ],
+    "/(landing)/layout": [
+      "static/chunks/webpack-dbf7c5a6c82145d3.js",
+      "static/chunks/fd9d1056-141807af861c8a3a.js",
+      "static/chunks/69-6c5cb58710947f84.js",
+      "static/chunks/main-app-39e286662836f9ba.js",
+      "static/chunks/app/(landing)/layout-46d7eae1a5d73feb.js"
     ],
     "/(landing)/for-msmes/page": [
       "static/chunks/webpack-dbf7c5a6c82145d3.js",
