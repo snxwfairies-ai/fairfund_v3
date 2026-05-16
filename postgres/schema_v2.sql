@@ -294,3 +294,37 @@ SELECT gen_random_uuid(),'b1000000-0000-0000-0000-000000000001',
 WHERE NOT EXISTS (SELECT 1 FROM verification_queue LIMIT 1);
 
 COMMIT;
+
+-- ── Waitlist ──────────────────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS waitlist (
+    id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name            TEXT NOT NULL,
+    email           TEXT NOT NULL,
+    phone           TEXT,
+    role            TEXT NOT NULL CHECK (role IN ('investor','sme','agent','ca_cs')),
+    company_name    TEXT,                        -- for SME/agent/CA
+    city            TEXT,
+    investment_size TEXT,                        -- for investors
+    raise_amount    TEXT,                        -- for SMEs
+    referral_source TEXT,                        -- how they heard about us
+    status          TEXT NOT NULL DEFAULT 'pending'
+                      CHECK (status IN ('pending','approved','invited','registered')),
+    notes           TEXT,
+    invited_at      TIMESTAMPTZ,
+    created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE (email)
+);
+CREATE INDEX IF NOT EXISTS idx_waitlist_role   ON waitlist(role, status);
+CREATE INDEX IF NOT EXISTS idx_waitlist_created ON waitlist(created_at DESC);
+
+-- Stats view for admin
+CREATE OR REPLACE VIEW v_waitlist_stats AS
+SELECT
+    role,
+    COUNT(*)                                          AS total,
+    COUNT(*) FILTER (WHERE status = 'pending')        AS pending,
+    COUNT(*) FILTER (WHERE status = 'invited')        AS invited,
+    COUNT(*) FILTER (WHERE status = 'registered')     AS converted,
+    COUNT(*) FILTER (WHERE created_at > NOW() - INTERVAL '7 days') AS last_7_days
+FROM waitlist
+GROUP BY role;

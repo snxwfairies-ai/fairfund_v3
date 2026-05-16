@@ -1,2 +1,2 @@
-import { redirect } from 'next/navigation';
-export default function RootPage() { redirect('/dashboard/marketplace'); }
+import LandingPage from './(landing)/page';
+export default function Page() { return <LandingPage />; }

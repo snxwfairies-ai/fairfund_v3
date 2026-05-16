@@ -1,3 +1,4 @@
+import { WaitlistModule }      from './modules/waitlist/waitlist.module';
 import { AIModule }            from './modules/ai/ai.module';
 import { StorageModule }       from './modules/storage/storage.module';
 import { OTPModule }           from './modules/otp/otp.module';
@@ -61,6 +62,7 @@ import configuration           from './config/configuration';
     StorageModule,
     OTPModule,
     KYCModule,
+    WaitlistModule,
     TransactionModule,
   ],
   controllers: [AppController],

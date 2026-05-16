@@ -15,6 +15,7 @@ const ALL_NAV = [
   { path: '/dashboard/agent',          label: 'Agent Hub',      icon: '🤝', roles: ['agent'] },
   { path: '/dashboard/ca',             label: 'Review Queue',   icon: '✅', roles: ['ca_cs'] },
   { path: '/dashboard/admin',          label: 'Admin Panel',    icon: '⚙️', roles: ['admin','super_admin'] },
+  { path: '/dashboard/admin/waitlist',   label: 'Waitlist',       icon: '📋', roles: ['admin','super_admin'] },
   { path: '/dashboard/analytics',      label: 'Analytics',      icon: '📊', roles: ['admin','super_admin','compliance_officer','investor'] },
   { path: '/dashboard/compliance',     label: 'Compliance',     icon: '⚖️', roles: ['investor','sme_admin','admin','super_admin','compliance_officer'] },
   { path: '/dashboard/profile',        label: 'My Profile',     icon: '👤', roles: [] },
