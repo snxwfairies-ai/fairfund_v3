@@ -35,7 +35,7 @@ export function SMECard({ sme, onClick }: { sme: SME; onClick: (s: SME) => void 
             <span className="text-[10px] text-slate-400">📍 {sme.location_city}</span>
           </div>
         </div>
-        <ScoreMeter score={sme.fairefund_score} />
+        <ScoreMeter score={sme.fairfund_score} />
       </div>
 
       <p className="text-[11px] text-slate-500 leading-relaxed mb-3">{sme.short_description}</p>

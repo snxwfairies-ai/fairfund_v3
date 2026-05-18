@@ -22,7 +22,7 @@ export class SmesService {
     if (sector && sector!=='All') { q+=` AND sector=$${i++}`;  params.push(sector); }
     if (stage)                    { q+=` AND stage=$${i++}`;   params.push(stage); }
     if (search)                   { q+=` AND (legal_name ILIKE $${i} OR sector ILIKE $${i} OR short_description ILIKE $${i})`; params.push(`%${search}%`); }
-    q+=' ORDER BY fairefund_score DESC NULLS LAST';
+    q+=' ORDER BY fairfund_score DESC NULLS LAST';
     return this.db.queryMany(q, params);
   }
 

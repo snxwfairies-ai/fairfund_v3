@@ -48,7 +48,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   }
 
   const unread = notifs.filter(n => !n.read).length;
-  const pageLabel = NAV.find(n => pathname.startsWith(n.path))?.label ?? 'FaireFund';
+  const pageLabel = NAV.find(n => pathname.startsWith(n.path))?.label ?? 'FairFund';
 
   return (
     <div className="flex min-h-screen bg-slate-50">
@@ -63,7 +63,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
           {!collapsed && (
             <div className="overflow-hidden">
-              <div className="text-white font-display text-sm font-black tracking-wide whitespace-nowrap">FaireFund</div>
+              <div className="text-white font-display text-sm font-black tracking-wide whitespace-nowrap">FairFund</div>
               <div className="text-[10px] tracking-widest uppercase whitespace-nowrap" style={{ color: '#C9A84C' }}>MSME Exchange</div>
             </div>
           )}
@@ -113,7 +113,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         {/* Topbar */}
         <header className="sticky top-0 z-40 bg-white border-b border-slate-200 px-7 py-3.5 flex items-center justify-between shadow-sm">
           <div className="text-sm">
-            <span className="text-slate-400">FaireFund / </span>
+            <span className="text-slate-400">FairFund / </span>
             <span className="font-bold text-navy">{pageLabel}</span>
           </div>
           <div className="flex items-center gap-2">

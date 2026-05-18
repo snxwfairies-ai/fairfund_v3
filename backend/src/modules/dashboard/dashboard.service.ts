@@ -44,9 +44,9 @@ export class DashboardService {
         // Top 3 opportunities matching their risk appetite
         this.db.queryMany(
           `SELECT id,legal_name,sector,expected_return_min,expected_return_max,
-                  fairefund_score,progress_pct,days_remaining,min_investment,tag,tag_color
+                  fairfund_score,progress_pct,days_remaining,min_investment,tag,tag_color
            FROM v_sme_progress WHERE status='active'
-           ORDER BY fairefund_score DESC LIMIT 3`
+           ORDER BY fairfund_score DESC LIMIT 3`
         ),
         // Recent investment transactions
         this.db.queryMany(

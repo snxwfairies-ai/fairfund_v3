@@ -72,7 +72,7 @@ export class AIService {
 
     // Update SME table
     await this.db.query(
-      `UPDATE smes SET fairefund_score=$1, ai_score=$1, ai_score_updated_at=NOW(),
+      `UPDATE smes SET fairfund_score=$1, ai_score=$1, ai_score_updated_at=NOW(),
          risk_level=$2 WHERE id=$3`,
       [score.overall, score.risk_level, smeId],
     );
@@ -131,16 +131,16 @@ export class AIService {
       const filter   = riskMap[appetite] ?? riskMap.moderate;
 
       let q = `SELECT id,legal_name,sector,expected_return_min,expected_return_max,
-                      fairefund_score,progress_pct,min_investment,tag,tag_color,risk_level,
+                      fairfund_score,progress_pct,min_investment,tag,tag_color,risk_level,
                       days_remaining,short_description
                FROM v_sme_progress
-               WHERE status='active' AND fairefund_score >= $1`;
+               WHERE status='active' AND fairfund_score >= $1`;
       const params: any[] = [filter.min];
       if (excludeIds.length) {
         q += ` AND id != ALL($${params.length + 1}::uuid[])`;
         params.push(excludeIds);
       }
-      q += ' ORDER BY fairefund_score DESC LIMIT 5';
+      q += ' ORDER BY fairfund_score DESC LIMIT 5';
 
       const recs = await this.db.queryMany(q, params);
       return recs;

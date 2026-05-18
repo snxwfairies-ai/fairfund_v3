@@ -22,9 +22,9 @@ const SAFEGUARDS = [
 const FAQ = [
   { q: 'What is the minimum investment?', a: 'Minimum is ₹50,000 per deal. There is no maximum per deal, but each offering is capped at 200 investors under Companies Act §42.' },
   { q: 'How are MSMEs verified?', a: 'Every MSME is reviewed by an empanelled CA/CS professional. They verify PAS-4 documents, audited financials, director KYC, and compliance tasks before the deal goes live.' },
-  { q: 'What if an MSME defaults?', a: 'Funds are held in escrow until allotment. If the deal doesn\'t close, you get a full refund. Post-allotment, FaireFund facilitates recovery and provides legal documentation for any dispute.' },
-  { q: 'Are returns guaranteed?', a: 'No — returns are projected, not guaranteed. FaireFund provides AI-scored risk assessments and analyst-reviewed IRR projections. Investment in unlisted securities carries risk.' },
-  { q: 'How do I exit my investment?', a: 'FaireFund is building a secondary market module (Phase 3). Currently, investments are held to tenure (12–36 months). Returns are paid per the term sheet.' },
+  { q: 'What if an MSME defaults?', a: 'Funds are held in escrow until allotment. If the deal doesn\'t close, you get a full refund. Post-allotment, FairFund facilitates recovery and provides legal documentation for any dispute.' },
+  { q: 'Are returns guaranteed?', a: 'No — returns are projected, not guaranteed. FairFund provides AI-scored risk assessments and analyst-reviewed IRR projections. Investment in unlisted securities carries risk.' },
+  { q: 'How do I exit my investment?', a: 'FairFund is building a secondary market module (Phase 3). Currently, investments are held to tenure (12–36 months). Returns are paid per the term sheet.' },
 ];
 
 export default function ForInvestorsPage() {
@@ -37,7 +37,7 @@ export default function ForInvestorsPage() {
           <Link href="/" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl flex items-center justify-center font-black text-lg"
                  style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
-            <span className="font-display font-bold text-base" style={{ color: '#0B1D3A' }}>FaireFund</span>
+            <span className="font-display font-bold text-base" style={{ color: '#0B1D3A' }}>FairFund</span>
           </Link>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm font-semibold px-4 py-2 rounded-lg"
@@ -166,7 +166,7 @@ export default function ForInvestorsPage() {
 
       {/* Footer */}
       <footer className="py-8 px-5 text-center" style={{ background: '#0B1D3A' }}>
-        <Link href="/" className="font-display text-white font-bold">FaireFund</Link>
+        <Link href="/" className="font-display text-white font-bold">FairFund</Link>
         <p className="text-xs mt-2" style={{ color: '#475569' }}>
           Investment in unlisted securities carries risk. Read all documents before investing.
         </p>

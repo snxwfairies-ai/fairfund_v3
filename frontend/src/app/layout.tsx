@@ -3,7 +3,7 @@ import { AuthProvider } from '@/lib/auth';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'FaireFund · MSME Exchange',
+  title: 'FairFund · MSME Exchange',
   description: "India's SEBI-aligned MSME Investment Exchange",
   robots: { index: false, follow: false },
 };

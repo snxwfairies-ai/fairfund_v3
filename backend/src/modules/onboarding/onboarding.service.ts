@@ -182,7 +182,7 @@ export class OnboardingService {
 
     if (targetStep === 'active') {
       await this.notifications.send(userId, 'success', 'Account Activated 🎉',
-        'Your FaireFund account is now fully active. You can start investing!');
+        'Your FairFund account is now fully active. You can start investing!');
     }
 
     return { user_id: userId, new_step: targetStep };
@@ -304,7 +304,7 @@ export class OnboardingService {
       kyc:          { title: 'KYC Required', msg: 'Submit your PAN and identity documents to proceed.' },
       verification: { title: 'Under Verification', msg: 'Your profile is being reviewed. We\'ll notify you.' },
       approval:     { title: 'Approved ✅', msg: 'Your account has been approved. Final activation in progress.' },
-      active:       { title: 'Account Active 🎉', msg: 'Welcome to FaireFund! You can now invest.' },
+      active:       { title: 'Account Active 🎉', msg: 'Welcome to FairFund! You can now invest.' },
     };
     const m = messages[to];
     if (m?.title) await this.notifications.send(userId, 'info', m.title, m.msg);

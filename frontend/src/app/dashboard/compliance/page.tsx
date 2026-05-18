@@ -111,7 +111,7 @@ export default function CompliancePage() {
       <div className="rounded-2xl p-7 text-white" style={{ background: 'linear-gradient(135deg,#0B1D3A,#1a3a6e)' }}>
         <h2 className="font-display text-xl mb-2">⚖️ Legal Framework</h2>
         <p className="text-sm text-slate-300 leading-relaxed mb-5 max-w-2xl">
-          FaireFund operates as a private placement platform under Companies Act 2013 §42 (maximum 200
+          FairFund operates as a private placement platform under Companies Act 2013 §42 (maximum 200
           investors per offering per financial year). All transactions comply with SEBI (ICDR) Regulations 2018,
           RBI Payment Aggregator guidelines for escrow, and IT Act 2000 for Aadhaar-based digital signatures.
           Income Tax §56(2) disclosures included in PAS-4 for all listed instruments.

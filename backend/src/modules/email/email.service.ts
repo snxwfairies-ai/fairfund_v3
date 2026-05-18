@@ -18,7 +18,7 @@ export class EmailService {
   constructor(private readonly config: ConfigService) {
     this.enabled = config.get('NODE_ENV') === 'production' &&
                    !!config.get('SMTP_HOST');
-    this.from    = `"FaireFund" <${config.get('SMTP_FROM', 'noreply@fairefund.in')}>`;
+    this.from    = `"FairFund" <${config.get('SMTP_FROM', 'noreply@fairfund.in')}>`;
 
     if (this.enabled) {
       this.transporter = nodemailer.createTransport({
@@ -54,7 +54,7 @@ export class EmailService {
   async sendOTP(to: string, name: string, otp: string) {
     return this.send({
       to,
-      subject: 'Your FaireFund verification code',
+      subject: 'Your FairFund verification code',
       html: this.layout(`
         <h2>Hello ${name},</h2>
         <p>Your verification code is:</p>
@@ -80,7 +80,7 @@ export class EmailService {
           <tr style="background:#F5F0E8;"><td style="padding:8px;color:#718096;">Amount</td><td style="padding:8px;font-weight:700;">₹${amount.toLocaleString('en-IN')}</td></tr>
           <tr><td style="padding:8px;color:#718096;">Status</td><td style="padding:8px;color:#2D7A4F;font-weight:700;">Active</td></tr>
         </table>
-        <a href="${this.config.get('APP_URL', 'https://fairefund.in')}/dashboard/portfolio"
+        <a href="${this.config.get('APP_URL', 'https://fairfund.in')}/dashboard/portfolio"
            style="background:#C9A84C;color:#0B1D3A;padding:12px 24px;border-radius:8px;
                   text-decoration:none;font-weight:700;display:inline-block;">
           View Portfolio →
@@ -99,12 +99,12 @@ export class EmailService {
         <h2>${approved ? '🎉 KYC Verified!' : '⚠️ KYC Update Required'}</h2>
         <p>Dear ${name},</p>
         ${approved
-          ? '<p>Your identity has been verified. You can now invest on FaireFund.</p>'
+          ? '<p>Your identity has been verified. You can now invest on FairFund.</p>'
           : `<p>Your KYC verification could not be completed.</p>
              ${reason ? `<p><strong>Reason:</strong> ${reason}</p>` : ''}
              <p>Please re-submit your documents with the corrections.</p>`
         }
-        <a href="${this.config.get('APP_URL', 'https://fairefund.in')}/dashboard/profile"
+        <a href="${this.config.get('APP_URL', 'https://fairfund.in')}/dashboard/profile"
            style="background:#0B1D3A;color:white;padding:12px 24px;border-radius:8px;
                   text-decoration:none;font-weight:700;display:inline-block;margin-top:16px;">
           ${approved ? 'Start Investing →' : 'Update Documents →'}
@@ -143,7 +143,7 @@ export class EmailService {
           <div style="width:44px;height:44px;background:linear-gradient(135deg,#C9A84C,#E8C96A);
                       border-radius:10px;display:inline-flex;align-items:center;justify-content:center;
                       font-size:22px;font-weight:900;color:#0B1D3A;">F</div>
-          <div style="color:white;font-size:16px;font-weight:700;margin-top:8px;">FaireFund</div>
+          <div style="color:white;font-size:16px;font-weight:700;margin-top:8px;">FairFund</div>
           <div style="color:#C9A84C;font-size:10px;letter-spacing:2px;">MSME EXCHANGE</div>
         </div>
         <!-- Content -->
@@ -152,8 +152,8 @@ export class EmailService {
         </div>
         <!-- Footer -->
         <div style="background:#F5F0E8;padding:16px 32px;text-align:center;color:#718096;font-size:11px;">
-          © 2025 FaireFund · <a href="#" style="color:#C9A84C;">Unsubscribe</a> ·
-          <a href="${this.config.get('APP_URL','https://fairefund.in')}/compliance" style="color:#C9A84C;">Compliance</a>
+          © 2025 FairFund · <a href="#" style="color:#C9A84C;">Unsubscribe</a> ·
+          <a href="${this.config.get('APP_URL','https://fairfund.in')}/compliance" style="color:#C9A84C;">Compliance</a>
         </div>
       </div>
     </body>

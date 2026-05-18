@@ -35,7 +35,7 @@ export class WaitlistService {
     );
     if (existing) {
       if (existing.status === 'registered') {
-        throw new ConflictException('This email is already a registered FaireFund member.');
+        throw new ConflictException('This email is already a registered FairFund member.');
       }
       throw new ConflictException(`You're already on the waitlist! We'll be in touch soon.`);
     }
@@ -164,9 +164,9 @@ export class WaitlistService {
 
     await this.email.send({
       to:      data.email,
-      subject: `You're on the FaireFund waitlist — Position #${position}`,
+      subject: `You're on the FairFund waitlist — Position #${position}`,
       html: this.email['layout'](`
-        <h2>Welcome to FaireFund, ${data.name}! 🎉</h2>
+        <h2>Welcome to FairFund, ${data.name}! 🎉</h2>
         <p>You've secured your spot as an early <strong>${roleLabel[data.role]}</strong>.</p>
 
         <div style="background:#F5F0E8;border-radius:12px;padding:20px;margin:20px 0;">
@@ -187,8 +187,8 @@ export class WaitlistService {
 
         <p style="color:#718096;font-size:13px;">
           In the meantime, refer a friend and jump the queue:
-          <a href="https://fairefund.in/?ref=${data.email.split('@')[0]}" style="color:#C9A84C;">
-            fairefund.in/?ref=${data.email.split('@')[0]}
+          <a href="https://fairfund.in/?ref=${data.email.split('@')[0]}" style="color:#C9A84C;">
+            fairfund.in/?ref=${data.email.split('@')[0]}
           </a>
         </p>
       `),
@@ -198,13 +198,13 @@ export class WaitlistService {
   private async sendInviteEmail(entry: any) {
     await this.email.send({
       to:      entry.email,
-      subject: `Your FaireFund invitation is ready, ${entry.name}!`,
+      subject: `Your FairFund invitation is ready, ${entry.name}!`,
       html: this.email['layout'](`
         <h2>Your spot is ready, ${entry.name}! 🚀</h2>
-        <p>We're excited to welcome you to FaireFund as an early <strong>${entry.role}</strong>.</p>
+        <p>We're excited to welcome you to FairFund as an early <strong>${entry.role}</strong>.</p>
 
         <div style="text-align:center;margin:32px 0;">
-          <a href="https://app.fairefund.in/register?invite=${entry.id}"
+          <a href="https://app.fairfund.in/register?invite=${entry.id}"
              style="background:linear-gradient(135deg,#C9A84C,#E8C96A);color:#0B1D3A;
                     padding:16px 32px;border-radius:12px;text-decoration:none;
                     font-weight:900;font-size:16px;display:inline-block;">
@@ -216,7 +216,7 @@ export class WaitlistService {
           This invitation is valid for 7 days. After that, you'll need to re-join the waitlist.
         </p>
         <p style="color:#718096;font-size:13px;">
-          Questions? Reply to this email or reach us at hello@fairefund.in
+          Questions? Reply to this email or reach us at hello@fairfund.in
         </p>
       `),
     });

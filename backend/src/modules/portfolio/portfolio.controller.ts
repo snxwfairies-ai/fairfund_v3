@@ -16,7 +16,7 @@ export class PortfolioController {
     const uid = req.user.id;
     return this.redis.cached(`portfolio:${uid}`, 30, async () => {
       const investments = await this.db.queryMany(
-        `SELECT i.*, s.legal_name AS sme_name, s.sector, s.location_city, s.stage, s.fairefund_score AS score
+        `SELECT i.*, s.legal_name AS sme_name, s.sector, s.location_city, s.stage, s.fairfund_score AS score
          FROM investments i JOIN smes s ON i.sme_id=s.id
          WHERE i.investor_id=$1 ORDER BY i.created_at DESC`, [uid]
       );

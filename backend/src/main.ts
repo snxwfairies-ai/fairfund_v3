@@ -57,7 +57,7 @@ async function bootstrap() {
   // ── Swagger (dev only) ──────────────────────────────────────────────────
   if (!isProd) {
     const swaggerConfig = new DocumentBuilder()
-      .setTitle('FaireFund API')
+      .setTitle('FairFund API')
       .setDescription('MSME Investment Exchange — v2')
       .setVersion('2.0')
       .addBearerAuth()
@@ -68,7 +68,7 @@ async function bootstrap() {
 
   const port = config.get<number>('PORT', 5000);
   await app.listen(port, '0.0.0.0');
-  console.log(`\n🚀 FaireFund API running on port ${port}`);
+  console.log(`\n🚀 FairFund API running on port ${port}`);
   console.log(`🌍 Environment: ${config.get('NODE_ENV', 'development')}\n`);
 }
 

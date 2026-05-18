@@ -50,7 +50,7 @@ export class AdminService {
       throw new BadRequestException(`SME is ${sme.status}, cannot approve`);
 
     await this.db.query(
-      `UPDATE smes SET status='active', risk_level=$1, fairefund_score=$2,
+      `UPDATE smes SET status='active', risk_level=$1, fairfund_score=$2,
        listing_date=CURRENT_DATE, updated_at=NOW() WHERE id=$3`,
       [riskLevel, score, smeId],
     );
@@ -60,7 +60,7 @@ export class AdminService {
     );
     if (sme.created_by) {
       await this.notifications.send(sme.created_by,'success','Listing Approved 🎉',
-        `${sme.legal_name} has been approved and is now live on FaireFund.`);
+        `${sme.legal_name} has been approved and is now live on FairFund.`);
     }
     await this.redis.invalidatePattern('smes:*');
     this.logger.log(`SME approved: ${smeId} by admin ${adminId}`);
@@ -133,7 +133,7 @@ export class AdminService {
       `INSERT INTO audit_log (user_id,action,entity_type,entity_id,new_value) VALUES ($1,$2,$3,$4,$5)`,
       [adminId,'KYC_APPROVED','user',userId,JSON.stringify({ by: adminId })]
     );
-    await this.notifications.send(userId,'success','KYC Verified ✅','Your identity is verified. You can now invest on FaireFund.');
+    await this.notifications.send(userId,'success','KYC Verified ✅','Your identity is verified. You can now invest on FairFund.');
     return { ok: true };
   }
 

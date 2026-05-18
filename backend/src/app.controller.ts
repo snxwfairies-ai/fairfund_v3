@@ -9,7 +9,7 @@ export class AppController {
   async health() {
     try {
       await this.db.query('SELECT 1');
-      return { status: 'ok', db: 'connected', platform: 'FaireFund', version: '2.0.0', uptime: process.uptime(), ts: new Date().toISOString() };
+      return { status: 'ok', db: 'connected', platform: 'FairFund', version: '2.0.0', uptime: process.uptime(), ts: new Date().toISOString() };
     } catch {
       return { status: 'degraded', db: 'disconnected' };
     }

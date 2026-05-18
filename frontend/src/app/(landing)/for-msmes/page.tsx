@@ -5,7 +5,7 @@ import { WaitlistForm } from '@/components/WaitlistForm';
 const TIMELINE = [
   { day: 'Day 1',   icon: '📝', title: 'Apply online',        desc: 'Submit company details, financials, and documents via our secure portal.' },
   { day: 'Day 3',   icon: '🧑‍⚖️', title: 'CA/CS assigned',      desc: 'An empanelled professional reviews your PAS-4, audited accounts, and compliance checklist.' },
-  { day: 'Day 7',   icon: '🤖', title: 'AI scoring',           desc: 'FaireFund AI scores your financial health, execution track record, and market position.' },
+  { day: 'Day 7',   icon: '🤖', title: 'AI scoring',           desc: 'FairFund AI scores your financial health, execution track record, and market position.' },
   { day: 'Day 10',  icon: '✅', title: 'Listing approved',     desc: 'Admin review complete. Your deal goes live to 2,000+ verified investors.' },
   { day: 'Day 21',  icon: '💰', title: 'Funds in escrow',      desc: 'Investments flow in. Funds held securely until allotment is confirmed by the board.' },
   { day: 'Day 30',  icon: '📤', title: 'Allotment & PAS-3',   desc: 'Shares allotted, PAS-3 auto-filed with MCA. Cap table updated automatically.' },
@@ -24,7 +24,7 @@ const ELIGIBILITY = [
 const COSTS = [
   { item: 'Listing fee',        amount: '₹0', note: 'Free for first 6 months (early access)' },
   { item: 'Platform fee',       amount: '2%', note: 'Of total amount raised, deducted at allotment' },
-  { item: 'CA/CS review',       amount: '₹0', note: 'Included — assigned by FaireFund' },
+  { item: 'CA/CS review',       amount: '₹0', note: 'Included — assigned by FairFund' },
   { item: 'PAS-3 auto-filing',  amount: '₹0', note: 'Automated, no CA fees for ROC' },
   { item: 'eSign per investor', amount: '₹25', note: 'Per subscription agreement signed' },
 ];
@@ -39,7 +39,7 @@ export default function ForMSMEsPage() {
           <Link href="/" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl flex items-center justify-center font-black text-lg"
                  style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
-            <span className="font-display font-bold text-base" style={{ color: '#0B1D3A' }}>FaireFund</span>
+            <span className="font-display font-bold text-base" style={{ color: '#0B1D3A' }}>FairFund</span>
           </Link>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm font-semibold px-4 py-2 rounded-lg"
@@ -170,7 +170,7 @@ export default function ForMSMEsPage() {
       </section>
 
       <footer className="py-8 px-5 text-center" style={{ background: '#0B1D3A' }}>
-        <Link href="/" className="font-display text-white font-bold">FaireFund</Link>
+        <Link href="/" className="font-display text-white font-bold">FairFund</Link>
         <p className="text-xs mt-2" style={{ color: '#475569' }}>
           Private placement under Companies Act 2013 §42. Max 200 investors per offering.
         </p>

@@ -17,7 +17,7 @@ export class AnalyticsController {
       const [stats, sectors, top] = await Promise.all([
         this.db.queryOne('SELECT * FROM v_platform_stats'),
         this.db.queryMany('SELECT sector, SUM(raised_so_far)::numeric AS raised FROM smes GROUP BY sector ORDER BY raised DESC'),
-        this.db.queryMany('SELECT legal_name AS name, fairefund_score AS score, raised_so_far, target_raise FROM smes ORDER BY fairefund_score DESC NULLS LAST LIMIT 6'),
+        this.db.queryMany('SELECT legal_name AS name, fairfund_score AS score, raised_so_far, target_raise FROM smes ORDER BY fairfund_score DESC NULLS LAST LIMIT 6'),
       ]);
       return {
         ...stats,

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # ═══════════════════════════════════════════════════════════
-#  FaireFund — Emergent Startup Script
+#  FairFund — Emergent Startup Script
 #  Runs on first boot and after redeploys.
 #  Path: /app/start.sh
 # ═══════════════════════════════════════════════════════════
 set -e
 
-echo "🚀 FaireFund starting on Emergent..."
+echo "🚀 FairFund starting on Emergent..."
 APP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # ── 1. Wait for PostgreSQL ──────────────────────────────────────────────────
@@ -19,18 +19,18 @@ echo "✅ PostgreSQL ready"
 # ── 2. Create database if needed ────────────────────────────────────────────
 PGPASSWORD="${POSTGRES_PASSWORD}" psql \
   -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" \
-  -tc "SELECT 1 FROM pg_database WHERE datname='${POSTGRES_DB:-fairefund}'" \
+  -tc "SELECT 1 FROM pg_database WHERE datname='${POSTGRES_DB:-fairfund}'" \
   | grep -q 1 || PGPASSWORD="${POSTGRES_PASSWORD}" createdb \
-  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" "${POSTGRES_DB:-fairefund}"
+  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" "${POSTGRES_DB:-fairfund}"
 
 # ── 3. Run schema migrations ─────────────────────────────────────────────────
 echo "📐 Running schema..."
 PGPASSWORD="${POSTGRES_PASSWORD}" psql \
-  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" -d "${POSTGRES_DB:-fairefund}" \
+  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" -d "${POSTGRES_DB:-fairfund}" \
   -f "$APP_DIR/postgres/schema.sql" --on-error-stop 2>&1 | grep -E "NOTICE|ERROR|error" || true
 
 PGPASSWORD="${POSTGRES_PASSWORD}" psql \
-  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" -d "${POSTGRES_DB:-fairefund}" \
+  -h 127.0.0.1 -U "${POSTGRES_USER:-ffuser}" -d "${POSTGRES_DB:-fairfund}" \
   -f "$APP_DIR/postgres/schema_v2.sql" --on-error-stop 2>&1 | grep -E "NOTICE|ERROR|error" || true
 
 echo "✅ Schema loaded"
@@ -65,7 +65,7 @@ node .next/standalone/server.js &
 FRONTEND_PID=$!
 
 echo ""
-echo "✅ FaireFund is live!"
+echo "✅ FairFund is live!"
 echo "   Frontend → http://localhost:3000"
 echo "   API      → http://localhost:8001/api/v1"
 echo "   Health   → http://localhost:8001/api/v1/health"

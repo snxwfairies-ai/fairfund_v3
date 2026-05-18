@@ -1,4 +1,4 @@
-# FaireFund — Emergent Deployment Guide
+# FairFund — Emergent Deployment Guide
 
 ## Architecture on Emergent
 
@@ -59,11 +59,11 @@ cd /app/frontend && npm install --legacy-peer-deps && npm run build
 ```bash
 # Load schema (idempotent — safe to re-run)
 PGPASSWORD=$POSTGRES_PASSWORD psql \
-  -h 127.0.0.1 -U ffuser -d fairefund \
+  -h 127.0.0.1 -U ffuser -d fairfund \
   -f /app/postgres/schema.sql
 
 PGPASSWORD=$POSTGRES_PASSWORD psql \
-  -h 127.0.0.1 -U ffuser -d fairefund \
+  -h 127.0.0.1 -U ffuser -d fairfund \
   -f /app/postgres/schema_v2.sql
 ```
 
@@ -73,7 +73,7 @@ PGPASSWORD=$POSTGRES_PASSWORD psql \
 
 Copy the supervisor config:
 ```bash
-cp /app/emergent/supervisord.conf /etc/supervisor/conf.d/fairefund.conf
+cp /app/emergent/supervisord.conf /etc/supervisor/conf.d/fairfund.conf
 supervisorctl reread && supervisorctl update
 ```
 
@@ -93,7 +93,7 @@ PORT=3000 HOSTNAME=0.0.0.0 node .next/standalone/server.js
 
 ```bash
 curl http://localhost:8001/api/v1/health
-# → {"status":"ok","db":"connected","platform":"FaireFund"}
+# → {"status":"ok","db":"connected","platform":"FairFund"}
 
 curl -s http://localhost:3000 | head -1
 # → <!DOCTYPE html>
@@ -101,15 +101,15 @@ curl -s http://localhost:3000 | head -1
 
 ---
 
-## Demo Accounts (password: `fairefund123`)
+## Demo Accounts (password: `fairfund123`)
 
 | Role | Email |
 |---|---|
-| Investor | prashant@fairefund.in |
+| Investor | prashant@fairfund.in |
 | SME Admin | riya@agritech.in |
-| Agent | agent@fairefund.in |
-| CA/CS | ca@fairefund.in |
-| Admin | admin@fairefund.in |
+| Agent | agent@fairfund.in |
+| CA/CS | ca@fairfund.in |
+| Admin | admin@fairfund.in |
 
 ---
 

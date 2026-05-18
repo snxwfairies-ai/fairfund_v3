@@ -41,7 +41,7 @@ export default function AnalyticsPage() {
       {/* Header */}
       <div className="mb-6">
         <h1 className="font-display text-3xl text-navy mb-1">Platform Analytics</h1>
-        <p className="text-slate-400 text-sm">FaireFund · Real-time overview</p>
+        <p className="text-slate-400 text-sm">FairFund · Real-time overview</p>
       </div>
 
       {/* Summary cards */}
@@ -127,7 +127,7 @@ export default function AnalyticsPage() {
       {/* Top SMEs table */}
       <div className="card overflow-hidden">
         <div className="px-5 py-4 border-b border-slate-100">
-          <h2 className="font-semibold text-sm text-navy">Top Listings by FaireFund Score</h2>
+          <h2 className="font-semibold text-sm text-navy">Top Listings by FairFund Score</h2>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">

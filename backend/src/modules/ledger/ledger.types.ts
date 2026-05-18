@@ -8,7 +8,7 @@ export enum AccountType {
   INVESTOR_LOCKED     = 'INVESTOR_LOCKED',       // Reserved for a pending investment
   INVESTOR_INVESTED   = 'INVESTOR_INVESTED',     // Allotted — money with MSME
   MSME_WALLET         = 'MSME_WALLET',           // MSME received funds
-  PLATFORM_FEES       = 'PLATFORM_FEES',         // FaireFund revenue
+  PLATFORM_FEES       = 'PLATFORM_FEES',         // FairFund revenue
   ESCROW_GATEWAY      = 'ESCROW_GATEWAY',        // Razorpay inbound
   WITHDRAWAL_PENDING  = 'WITHDRAWAL_PENDING',    // Queued for bank payout
   BANK_SETTLEMENT     = 'BANK_SETTLEMENT',       // Completed payout

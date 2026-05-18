@@ -13,9 +13,9 @@ import { RedisService }      from '../redis/redis.service';
   namespace: '/ws',
   transports: ['websocket', 'polling'],
 })
-export class FaireFundGateway implements OnGatewayConnection, OnGatewayDisconnect {
+export class FairFundGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server: Server;
-  private readonly logger = new Logger(FaireFundGateway.name);
+  private readonly logger = new Logger(FairFundGateway.name);
 
   // userId → socketId mapping (for targeted delivery)
   private readonly userSockets = new Map<string, Set<string>>();
@@ -46,7 +46,7 @@ export class FaireFundGateway implements OnGatewayConnection, OnGatewayDisconnec
       this.userSockets.get(payload.sub)!.add(socket.id);
 
       this.logger.log(`WS connected: ${payload.sub} [${socket.id}]`);
-      socket.emit('connected', { message: 'FaireFund WebSocket connected', userId: payload.sub });
+      socket.emit('connected', { message: 'FairFund WebSocket connected', userId: payload.sub });
     } catch {
       socket.emit('error', { message: 'Unauthorized' });
       socket.disconnect();

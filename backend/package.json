@@ -1,7 +1,7 @@
 {
-  "name": "fairefund-backend",
+  "name": "fairfund-backend",
   "version": "2.0.0",
-  "description": "FaireFund — NestJS Production Backend",
+  "description": "FairFund — NestJS Production Backend",
   "private": true,
   "scripts": {
     "build": "nest build",

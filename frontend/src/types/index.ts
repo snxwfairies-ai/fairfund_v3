@@ -29,7 +29,7 @@ export interface SME {
   tenure_months: number;
   revenue_last_fy: number;
   investor_count: number;
-  fairefund_score: number;
+  fairfund_score: number;
   risk_level: 'low' | 'medium' | 'high' | 'very_high';
   tag: string;
   tag_color: string;

@@ -67,7 +67,7 @@ export default function SMEDashboardPage() {
           sub={`of ${formatINR(sme.target_raise)} target`} />
         <StatCard icon="👥" value={sme.investor_count} label="Investors" sub="Committed" />
         <StatCard icon="⏳" value={days_left}           label="Days Left"  sub="Until closing" />
-        <StatCard icon="⭐" value={`${sme.fairefund_score}/100`} label="FaireFund Score" sub="AI-assisted" />
+        <StatCard icon="⭐" value={`${sme.fairfund_score}/100`} label="FairFund Score" sub="AI-assisted" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">

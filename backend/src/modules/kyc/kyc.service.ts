@@ -149,7 +149,7 @@ export class KYCService {
 
     if (newStatus === 'verified') {
       await this.notifications.send(userId, 'success', 'KYC Verified ✅',
-        'Your identity has been verified. You can now invest on FaireFund.');
+        'Your identity has been verified. You can now invest on FairFund.');
       // Advance onboarding
       await this.db.query(
         `UPDATE users SET onboarding_step='verification', updated_at=NOW()

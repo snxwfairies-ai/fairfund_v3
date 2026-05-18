@@ -119,7 +119,7 @@ export default function LandingPage() {
             <div className="w-9 h-9 rounded-xl flex items-center justify-center font-display font-black text-xl"
                  style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
             <div>
-              <span className="font-display font-bold text-lg" style={{ color: '#0B1D3A' }}>FaireFund</span>
+              <span className="font-display font-bold text-lg" style={{ color: '#0B1D3A' }}>FairFund</span>
               <span className="ml-2 text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded-full"
                     style={{ background: '#FEF9EE', color: '#C9A84C', border: '1px solid #C9A84C44' }}>EARLY ACCESS</span>
             </div>
@@ -228,7 +228,7 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <p className="text-xs font-black tracking-[3px] uppercase mb-3" style={{ color: '#C9A84C' }}>Simple. Compliant. Transparent.</p>
-            <h2 className="font-display text-4xl" style={{ color: '#0B1D3A' }}>How FaireFund Works</h2>
+            <h2 className="font-display text-4xl" style={{ color: '#0B1D3A' }}>How FairFund Works</h2>
             <p className="mt-3 max-w-md mx-auto text-sm" style={{ color: '#64748B' }}>
               From browsing to allotment in under 14 days. Every step is legally binding and auditable.
             </p>
@@ -327,7 +327,7 @@ export default function LandingPage() {
             Built on India's regulatory framework
           </h2>
           <p className="text-sm leading-relaxed mb-8" style={{ color: '#64748B' }}>
-            FaireFund operates as a private placement platform under Companies Act 2013 §42
+            FairFund operates as a private placement platform under Companies Act 2013 §42
             (maximum 200 investors per offering). Every transaction is escrow-backed,
             eSign-verified, and auto-filed with the ROC.
           </p>
@@ -399,7 +399,7 @@ export default function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center font-display font-black text-xl"
                      style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
-                <span className="font-display text-white font-bold text-lg">FaireFund</span>
+                <span className="font-display text-white font-bold text-lg">FairFund</span>
               </div>
               <p style={{ color: '#64748B', fontSize: 13, lineHeight: 1.7 }}>
                 India's SEBI-aligned MSME Investment Exchange.
@@ -415,7 +415,7 @@ export default function LandingPage() {
             </div>
             <div>
               <p className="font-bold text-xs uppercase tracking-widest mb-4" style={{ color: '#C9A84C' }}>Company</p>
-              {['About FaireFund','Contact Us','Privacy Policy','Terms of Service'].map(l => (
+              {['About FairFund','Contact Us','Privacy Policy','Terms of Service'].map(l => (
                 <a key={l} href="#" className="block mb-2 text-sm" style={{ color: '#64748B' }}>{l}</a>
               ))}
               <div className="mt-4">
@@ -428,7 +428,7 @@ export default function LandingPage() {
           <div className="border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-3"
                style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
             <p style={{ color: '#475569', fontSize: 12 }}>
-              © 2025 FaireFund Technologies Pvt Ltd. All rights reserved.
+              © 2025 FairFund Technologies Pvt Ltd. All rights reserved.
             </p>
             <p style={{ color: '#475569', fontSize: 12 }}>
               ⚠️ Investment in unlisted securities carries risk. Read all offer documents before investing.

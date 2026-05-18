@@ -4,16 +4,16 @@ import { useState, FormEvent } from 'react';
 import { useAuth } from '@/lib/auth';
 
 const DEMOS = [
-  { label: 'Investor',      email: 'prashant@fairefund.in' },
+  { label: 'Investor',      email: 'prashant@fairfund.in' },
   { label: 'SME Admin',     email: 'riya@agritech.in' },
-  { label: 'Admin',         email: 'admin@fairefund.in' },
-  { label: 'Compliance',    email: 'compliance@fairefund.in' },
+  { label: 'Admin',         email: 'admin@fairfund.in' },
+  { label: 'Compliance',    email: 'compliance@fairfund.in' },
 ];
 
 export default function LoginPage() {
   const { login, register } = useAuth();
   const [mode, setMode]     = useState<'login' | 'register'>('login');
-  const [form, setForm]     = useState<Record<string,string>>({ name:'', email:'prashant@fairefund.in', password:'fairefund123', role:'investor', phone:'', pan:'', referral_code:'' });
+  const [form, setForm]     = useState<Record<string,string>>({ name:'', email:'prashant@fairfund.in', password:'fairfund123', role:'investor', phone:'', pan:'', referral_code:'' });
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState('');
 
@@ -67,7 +67,7 @@ export default function LoginPage() {
           <div className="flex lg:hidden items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center font-display font-black text-xl"
                  style={{ background: 'linear-gradient(135deg,#C9A84C,#E8C96A)', color: '#0B1D3A' }}>F</div>
-            <span className="font-display text-xl text-navy">FaireFund</span>
+            <span className="font-display text-xl text-navy">FairFund</span>
           </div>
 
           <h2 className="font-display text-3xl text-navy mb-1">
@@ -80,11 +80,11 @@ export default function LoginPage() {
           {/* Demo accounts */}
           {mode === 'login' && (
             <div className="bg-cream rounded-xl p-4 mb-6">
-              <p className="text-xs font-bold text-navy mb-2">🚀 Demo accounts (password: fairefund123)</p>
+              <p className="text-xs font-bold text-navy mb-2">🚀 Demo accounts (password: fairfund123)</p>
               <div className="flex flex-wrap gap-2">
                 {DEMOS.map(d => (
                   <button key={d.label}
-                    onClick={() => setForm(f => ({ ...f, email: d.email, password: 'fairefund123' }))}
+                    onClick={() => setForm(f => ({ ...f, email: d.email, password: 'fairfund123' }))}
                     className="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-navy hover:border-amber-400 transition-colors">
                     {d.label}
                   </button>
@@ -139,7 +139,7 @@ export default function LoginPage() {
           </form>
 
           <p className="text-center text-sm text-slate-400 mt-5">
-            {mode === 'login' ? 'New to FaireFund?' : 'Already have an account?'}{' '}
+            {mode === 'login' ? 'New to FairFund?' : 'Already have an account?'}{' '}
             <button onClick={() => { setMode(m => m === 'login' ? 'register' : 'login'); setError(''); }}
               className="text-amber-600 font-bold hover:underline">
               {mode === 'login' ? 'Create account' : 'Sign in'}

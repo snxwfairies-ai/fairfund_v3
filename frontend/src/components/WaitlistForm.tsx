@@ -28,7 +28,7 @@ const ROLE_CONFIG = {
   ca_cs: {
     label:    'CA / CS Professional',
     icon:     '⚖️',
-    desc:     'Get empanelled as a FaireFund verifier',
+    desc:     'Get empanelled as a FairFund verifier',
     color:    '#7C3AED',
     extraField: { name: 'company_name', label: 'Your firm / practice name', type: 'text', placeholder: 'ABC & Associates' },
   },
@@ -89,13 +89,13 @@ export function WaitlistForm({ defaultRole, compact = false }: Props) {
           Usually within 2–4 weeks.
         </p>
         <div className="mt-4 flex gap-2 justify-center flex-wrap">
-          <a href={`https://twitter.com/intent/tweet?text=Just joined the @FaireFundIN waitlist! India's first SEBI-aligned MSME investment exchange. Join me: https://fairefund.in`}
+          <a href={`https://twitter.com/intent/tweet?text=Just joined the @FairFundIN waitlist! India's first SEBI-aligned MSME investment exchange. Join me: https://fairfund.in`}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white"
             style={{ background: '#1DA1F2' }}>
             🐦 Share on X
           </a>
-          <a href={`https://wa.me/?text=I just joined FaireFund's waitlist – India's MSME investment exchange. Check it out: https://fairefund.in`}
+          <a href={`https://wa.me/?text=I just joined FairFund's waitlist – India's MSME investment exchange. Check it out: https://fairfund.in`}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white"
             style={{ background: '#25D366' }}>

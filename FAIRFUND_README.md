@@ -1,4 +1,4 @@
-# 🏛️ FaireFund — MSME Investment Exchange Platform
+# 🏛️ FairFund — MSME Investment Exchange Platform
 ### Production-Grade · Docker-First · SEBI-Aligned · 60 Tests
 
 Full-stack fintech platform: MSMEs raise funds, investors invest, agents refer, CA/CS verify.
@@ -14,15 +14,15 @@ make dev        # development with hot reload
 make prod       # production on :80/:443
 ```
 
-**Demo accounts** (password: `fairefund123`):
+**Demo accounts** (password: `fairfund123`):
 
 | Role | Email |
 |---|---|
-| Investor | prashant@fairefund.in |
+| Investor | prashant@fairfund.in |
 | SME Admin | riya@agritech.in |
-| Agent | agent@fairefund.in |
-| CA/CS | ca@fairefund.in |
-| Admin | admin@fairefund.in |
+| Agent | agent@fairfund.in |
+| CA/CS | ca@fairfund.in |
+| Admin | admin@fairfund.in |
 
 ---
 

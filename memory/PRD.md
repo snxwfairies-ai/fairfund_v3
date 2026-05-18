@@ -1,4 +1,4 @@
-# FaireFund — Deployment on Emergent
+# FairFund — Deployment on Emergent
 
 ## Deployed Versions
 - **v1 (2026-05-14)**: Initial deployment — 16 backend modules
@@ -26,19 +26,19 @@
 - **SMTP**: email no-op
 
 ## Test Credentials
-All demo users — password `fairefund123`:
+All demo users — password `fairfund123`:
 | Role | Email |
 |---|---|
-| Investor | prashant@fairefund.in |
+| Investor | prashant@fairfund.in |
 | SME Admin | riya@agritech.in |
-| Agent | agent@fairefund.in |
-| CA/CS | ca@fairefund.in |
-| Admin | admin@fairefund.in |
-| Compliance | compliance@fairefund.in |
+| Agent | agent@fairfund.in |
+| CA/CS | ca@fairfund.in |
+| Admin | admin@fairfund.in |
+| Compliance | compliance@fairfund.in |
 
 ## Infrastructure
-- Postgres: `postgresql://ffuser:fairefund_pg_pass@127.0.0.1:5432/fairefund`
-- Redis: `redis://:fairefund_redis_pass@127.0.0.1:6379`
+- Postgres: `postgresql://ffuser:fairfund_pg_pass@127.0.0.1:5432/fairfund`
+- Redis: `redis://:fairfund_redis_pass@127.0.0.1:6379`
 - Supervisor: `/etc/supervisor/conf.d/supervisord.conf` (overridden — manages backend/frontend/postgres/redis)
 
 ## Backlog / Next Actions
