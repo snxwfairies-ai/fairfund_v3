@@ -1,19 +1,19 @@
 {
-  "/_not-found": "app/_not-found.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/landing/for-investors/page": "app/landing/for-investors/page.js",
+  "/landing/page": "app/landing/page.js",
+  "/landing/for-msmes/page": "app/landing/for-msmes/page.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
   "/dashboard/admin/page": "app/dashboard/admin/page.js",
   "/dashboard/admin/waitlist/page": "app/dashboard/admin/waitlist/page.js",
+  "/dashboard/agent/page": "app/dashboard/agent/page.js",
   "/dashboard/analytics/page": "app/dashboard/analytics/page.js",
   "/dashboard/ca/page": "app/dashboard/ca/page.js",
-  "/dashboard/agent/page": "app/dashboard/agent/page.js",
   "/dashboard/compliance/page": "app/dashboard/compliance/page.js",
   "/dashboard/marketplace/page": "app/dashboard/marketplace/page.js",
   "/dashboard/portfolio/page": "app/dashboard/portfolio/page.js",
-  "/dashboard/sme-create/page": "app/dashboard/sme-create/page.js",
   "/dashboard/profile/page": "app/dashboard/profile/page.js",
-  "/dashboard/sme-dashboard/page": "app/dashboard/sme-dashboard/page.js",
-  "/(landing)/for-investors/page": "app/(landing)/for-investors/page.js",
-  "/(landing)/for-msmes/page": "app/(landing)/for-msmes/page.js",
-  "/(landing)/page": "app/(landing)/page.js"
+  "/dashboard/sme-create/page": "app/dashboard/sme-create/page.js",
+  "/dashboard/sme-dashboard/page": "app/dashboard/sme-dashboard/page.js"
 }

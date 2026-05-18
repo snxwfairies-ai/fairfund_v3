@@ -1,4 +1,4 @@
-// File: /app/frontend/src/app/dashboard/admin/waitlist/page.tsx
+// File: /home/lightshadow03/snxwfairies/fairfund/frontend/src/app/dashboard/admin/waitlist/page.tsx
 import * as entry from '../../../../../../src/app/dashboard/admin/waitlist/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
